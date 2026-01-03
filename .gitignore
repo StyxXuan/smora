@@ -1,0 +1,16 @@
+*.so
+*.pyc
+__pycache__/
+*.log
+.DS_Store
+outputs/
+results/
+*.zip
+evaluation/
+# Large dataset files (keep only essential files)
+packages/LLaMA-Factory/data/shuffled_train_set.json
+packages/LLaMA-Factory/data/shuffled_combined_train_set.json
+packages/LLaMA-Factory/data/combined_test.json
+packages/LLaMA-Factory/data/shuffle_update.json
+packages/LLaMA-Factory/data/wiki_demo.txt
+packages/LLaMA-Factory/data/mixed_datasets/**/*.json

@@ -1,0 +1,12 @@
+torch>=2.1.0
+torchvision
+torchaudio
+datasets
+accelerate
+trl
+scipy
+sentencepiece
+protobuf
+gradio
+matplotlib
+numpy

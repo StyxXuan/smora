@@ -1,0 +1,1 @@
+opencompass --models hf_llama3_8b_instruct_smora_filtered --datasets ds1000_service_eval_gen_cbc84f

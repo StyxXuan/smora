@@ -1,0 +1,46 @@
+### model
+model_name_or_path: "/inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/public/models/llms/Qwen2.5-7B-Instruct"
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+# lora_target: gate_proj,down_proj,up_proj
+lora_target: all
+lora_type: srmole
+lora_rank: 64
+lora_alpha: 16
+activate_r: 8
+# deepspeed: /inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/zhouyixiao-240108120127/work/acl-2025-moe-lora/LLaMA-Factory/examples/deepspeed/ds_z2_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
+# # resume_from_checkpoint: ./results/llama2-7b-srmole
+
+### dataset
+dataset: shuffle_update
+template: qwen
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 18
+
+### output
+output_dir: "/inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/zhouyixiao-240108120127/work/acl-2025-moe-lora/LLaMA-Factory/results/qwen2.5-7b-srmole-64-8"
+logging_steps: 10
+save_steps: 1000
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 8
+gradient_accumulation_steps: 16
+learning_rate: 1.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: True
+ddp_timeout: 180000000
+train_on_prompt: true
+
+### eval
+val_size: 0.01
+per_device_eval_batch_size: 8
+eval_strategy: steps
+eval_steps: 20
