@@ -1,7 +1,7 @@
 # KDD-2026-SMoRA
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2306.02913-b31b1b.svg)](https://arxiv.org/pdf/2302.10911.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-2306.02913-b31b1b.svg)](https://arxiv.org/pdf/2501.15103)
 
 >**This is the official implementation of the KDD 2026 paper: *Each Rank Could be an Expert: Single-Ranked Mixture of Experts LoRA for Multi-task Learning***
 
